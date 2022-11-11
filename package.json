@@ -1,0 +1,24 @@
+{
+  "name": "gaming_franchise_backend",
+  "version": "1.0.0",
+  "description": "Backend API for Gaming Franchises Project using ExpressJS and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tprice-90/gaming_franchise_backend.git"
+  },
+  "author": "Terry Price",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tprice-90/gaming_franchise_backend/issues"
+  },
+  "homepage": "https://github.com/Tprice-90/gaming_franchise_backend#readme",
+  "dependencies": {
+    "@types/express": "^4.17.14",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3"
+  }
+}
