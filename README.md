@@ -109,3 +109,6 @@ nested objects whereas, True bases it of the qs library which does.
 - Next I will attempt on my own to add the route endpoint in gameRoutes.js and compare to tutorial method
   - I mostly had the right idea in creating the route, had to check tutorial for including the ID of the
     game, needed to add "/:id" to the route parameter and include "req.params.id" in the await function
+- Final function will be DELETE, again attempting on my own before comparing to tutorial
+  - code matched tutorial perfectly
+- At this point final testing can be done with Postman
