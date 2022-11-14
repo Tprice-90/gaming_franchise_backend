@@ -1,4 +1,4 @@
-const mysql = require('mysql/promise');
+const mysql = require('mysql2/promise');
 const config = require('../config');
 
 async function query(sql, params) {
