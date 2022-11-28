@@ -112,3 +112,13 @@ nested objects whereas, True bases it of the qs library which does.
 - Final function will be DELETE, again attempting on my own before comparing to tutorial
   - code matched tutorial perfectly
 - At this point final testing can be done with Postman
+
+### 2022/11/27
+
+- While testing connection with [gaming_franchises_frontend](https://github.com/Tprice-90/gaming_franchises_frontend), ran into an issue where CORS access was blocked
+- found documentation at [expressjs.com](https://expressjs.com/en/resources/middleware/cors.html) to install and configure cors middleware
+  - `npm install cors`
+  - in index.js: `let cors = require("cors");`
+                 `app.use(cors());`
+  - this enables global cors use rather than individual routes
+  - fixed the cors issue
