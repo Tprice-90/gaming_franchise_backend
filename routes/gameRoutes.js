@@ -13,6 +13,17 @@ router.get('/', async function(req, res, next) {
     }
 });
 
+// GET single game by id
+router.get('/:id', async function(req, res, next) {
+    try {
+        res.json(await gameService.get(req.params.id))
+    }
+    catch(err) {
+        console.error(`Error while getting data, ${err.message}`);
+        next(err);
+    }
+});
+
 // POST new game
 router.post('/', async function(req, res, next) {
     try {

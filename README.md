@@ -122,3 +122,4 @@ nested objects whereas, True bases it of the qs library which does.
                  `app.use(cors());`
   - this enables global cors use rather than individual routes
   - fixed the cors issue
+  - Forgot to create route for SINGLE game entry

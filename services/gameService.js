@@ -11,6 +11,15 @@ async function getAll() {
     return data;
 }
 
+// Display single game entry
+async function get(id) {
+    const row = await db.query(`SELECT * FROM games WHERE id=${id}`);
+
+    const data = helper.emptyOrRows(row);
+
+    return data;
+}
+
 // Add a game
 async function create(game) {
     const result = await db.query(
@@ -60,4 +69,4 @@ async function remove(id) {
     return {message};
 }
 
-module.exports = {getAll, create, update, remove};
+module.exports = {getAll, get, create, update, remove};
