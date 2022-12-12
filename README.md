@@ -123,3 +123,9 @@ nested objects whereas, True bases it of the qs library which does.
   - this enables global cors use rather than individual routes
   - fixed the cors issue
   - Forgot to create route for SINGLE game entry
+
+### 2022/12/12
+
+- Issue with json data type for tags, removed column from database as well as all CRUD opperations
+- One to many relationship will be needed in order for this functionality to work properly,
+  will implement this after further research on how it works with express

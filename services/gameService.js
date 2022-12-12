@@ -4,7 +4,7 @@ const config = require('../config');
 
 // Display all game entries
 async function getAll() {
-    const rows = await db.query(`SELECT id, title, description, creator, imgURL, type, tags FROM games`);
+    const rows = await db.query(`SELECT id, title, description, creator, imgURL, type FROM games`);
 
     const data = helper.emptyOrRows(rows);
 
@@ -23,9 +23,9 @@ async function get(id) {
 // Add a game
 async function create(game) {
     const result = await db.query(
-        `INSERT INTO games (title, description, creator, imgURL, type, tags)
+        `INSERT INTO games (title, description, creator, imgURL, type)
         VALUES
-        (${game.title}, ${game.description}, ${game.creator}, ${game.imgURL}, ${game.type}, ${game.tags})`
+        ('${game.title}', '${game.description}', '${game.creator}', '${game.imgURL}', '${game.type}')`
     );
 
     let message = 'Error creating game entry';
@@ -41,7 +41,7 @@ async function create(game) {
 async function update(id, game) {
     const result = await db.query(
         `UPDATE games
-        SET title=${game.title}, description=${game.description}, creator=${game.creator}, imgURL=${game.imgURL}, type=${game.type}, tags=${game.tags}
+        SET title=${game.title}, description=${game.description}, creator=${game.creator}, imgURL=${game.imgURL}, type=${game.type}
         WHERE id=${id}`
     );
 
