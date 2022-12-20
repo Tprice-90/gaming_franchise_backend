@@ -41,8 +41,8 @@ async function create(game) {
 async function update(id, game) {
     const result = await db.query(
         `UPDATE games
-        SET title=${game.title}, description=${game.description}, creator=${game.creator}, imgURL=${game.imgURL}, type=${game.type}
-        WHERE id=${id}`
+        SET title='${game.title}', description='${game.description}', creator='${game.creator}', imgURL='${game.imgURL}', type='${game.type}'
+        WHERE id=${id};`
     );
 
     let message = 'Error updating game entry';

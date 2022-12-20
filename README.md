@@ -129,3 +129,8 @@ nested objects whereas, True bases it of the qs library which does.
 - Issue with json data type for tags, removed column from database as well as all CRUD opperations
 - One to many relationship will be needed in order for this functionality to work properly,
   will implement this after further research on how it works with express
+
+### 2022/12/20
+
+- Had to fix Update method, '' was missing from each value causing a 500 error message on the front end
+  when trying to update
