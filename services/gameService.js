@@ -13,7 +13,7 @@ async function getAll() {
 
 // Display single game entry
 async function get(id) {
-    const row = await db.query(`SELECT * FROM games WHERE id=${id}`);
+    const row = await db.query(`SELECT * FROM games WHERE id=${id};`);
 
     const data = helper.emptyOrRows(row);
 
@@ -25,7 +25,7 @@ async function create(game) {
     const result = await db.query(
         `INSERT INTO games (title, description, creator, imgURL, type)
         VALUES
-        ('${game.title}', '${game.description}', '${game.creator}', '${game.imgURL}', '${game.type}')`
+        ('${game.title}', '${game.description}', '${game.creator}', '${game.imgURL}', '${game.type}');`
     );
 
     let message = 'Error creating game entry';
@@ -57,7 +57,7 @@ async function update(id, game) {
 // DELETE game from database
 async function remove(id) {
     const result = await db.query(
-        `DELETE FROM games where id=${id}`
+        `DELETE FROM games where id='${id}';`
     );
 
     let message = 'Error deleting game entry';

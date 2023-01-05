@@ -134,3 +134,8 @@ nested objects whereas, True bases it of the qs library which does.
 
 - Had to fix Update method, '' was missing from each value causing a 500 error message on the front end
   when trying to update
+
+### 2023/01/05
+
+- adding missing semicolons to crud statements for consistency, also adding '' to delete functions id
+  condition
