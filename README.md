@@ -139,3 +139,8 @@ nested objects whereas, True bases it of the qs library which does.
 
 - adding missing semicolons to crud statements for consistency, also adding '' to delete functions id
   condition
+
+### 2023/01/09
+
+- corrected issue with remove function in game service, was missing '/' in id parameter which was 
+  causing an issue with path when calling the function
